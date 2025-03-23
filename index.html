@@ -8,16 +8,24 @@
 </head>
 <body>
     <header>
-        <h1 class="logo">FLATDANGO</h1>
+        <h1 class="logo">
+            <a href="#hero-page">FLATDANGO</a>
+        </h1>
         <nav>
             <ul>
-                <li><a href="">Buy Tickets</a></li>
+                <li><a href="#movies-body">Buy Tickets</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero-page"></section>
-        <section class="movies-body">
+        <section class="hero-page" id="hero-page">
+            <div class="hero-page-layer">
+                <h1>FLATDANGO</h1>
+                <a href="#movies-body"><button>Buy Ticket</button></a>
+            </div>
+            
+        </section>
+        <section class="movies-body" id="movies-body">
             <article class="movie-titles">
                 <ul id="films">
                     
@@ -28,7 +36,9 @@
             </article>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        &#169; Flatdango
+    </footer>
 </body>
 
 <script src="script.js"></script>

@@ -5,7 +5,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
-    /* outline: 2px solid red; */
+    scroll-behavior: smooth;
+    outline: 2px solid red;
 }
 
 body{
@@ -28,19 +29,62 @@ header{
     z-index: 10;
 }
 
+header a{
+    color: white; 
+   text-decoration: none;
+}
+
 nav ul li{
     list-style: none;
     font-size: 1.2rem;
     
 }
 
-nav ul li a {
-   color: white; 
-   text-decoration: none;
-}
 
 nav ul li a:hover{
     text-decoration: underline;
+}
+
+.hero-page{
+    width: 100%;
+    height: 100vh;
+    margin: 80px auto;
+    background: url(./image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.hero-page-layer{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(45deg,rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.849));
+    display: grid;
+    place-content: center;
+}
+
+.hero-page-layer h1{
+    font-size: 4rem;
+}
+
+.hero-page-layer button{
+    width: 150px;
+    padding: 15px 20px;
+    font-size: 1rem;   
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.281);
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    cursor: pointer;
+    color: white;
+}
+
+.hero-page-layer button a{
+    text-decoration: none;
+    
+
 }
 
 .movies-body{
@@ -68,4 +112,14 @@ nav ul li a:hover{
 
 .movie-details{
     width: 30%;
+}
+
+
+footer{
+    background-color: rgb(0, 48, 73);
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+    color: white;
+    font-size: 1.1rem;
 }
