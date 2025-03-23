@@ -48,6 +48,7 @@ function loadMovieDetails(movieId) {
         </div>
         <div class="movie-descriptions">
             <p>${movie.description}</p>
+            <hr>
             <div class="time-and-tickets">
                 <p>${movie.showtime}</p>
                 <p><span>${movie.capacity - movie.tickets_sold}</span> remaining tickets</p>
