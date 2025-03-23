@@ -44,7 +44,28 @@ function displayMovies(movie){
 
         document.querySelector(".movie-details").appendChild(card)
 
-        
+        // Buy Ticket EventListener
+        const buyTicketBtn = card.querySelector(".buy-ticket-button");
+        buyTicketBtn.addEventListener("click",() => {
+            
+            
+
+            let remainingTickets = card.querySelector("span")
+            let ticketsLeft = parseInt(remainingTickets.textContent)
+            
+            if(ticketsLeft > 0){
+                ticketsLeft -= 1
+                remainingTickets.textContent = ticketsLeft
+                
+            }
+            else{
+                remainingTickets.textContent = 0
+                buyTicketBtn.innerText = "Sold Out"
+                buyTicketBtn.disabled = "true"
+            }
+            
+        })
+           
 }
 
 
