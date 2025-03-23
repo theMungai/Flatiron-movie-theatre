@@ -14,7 +14,7 @@ function displayMovies(movie){
         document.querySelector("#films").appendChild(movieTitles)
 
         movieTitles.addEventListener("click", () => {
-            loadMovies(movie)
+            loadMovies(movie.id)
         })
 
         // Movie Posters
@@ -69,6 +69,7 @@ function displayMovies(movie){
 }
 
 
-function loadMovies(movie){
-
+function loadMovies(movieId){
+    console.log(movieId);
+    
 }
