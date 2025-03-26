@@ -1,7 +1,14 @@
 fetch("https://raw.githubusercontent.com/theMungai/Flatiron-movie-theatre/main/db.json")
     .then((response) => response.json())
-    .then((movies) => {
-        console.log(movies); // Log the fetched data to ensure it's correct
+    .then((data) => {
+        console.log(data);  // Log the full data object to see its structure
+        const movies = data.films;  // Assuming films is the correct key
+
+        if (!Array.isArray(movies)) {
+            console.error('Expected an array, but got:', movies);
+            return;
+        }
+
         window.allMovies = movies;
 
         if (movies.length > 0) {
