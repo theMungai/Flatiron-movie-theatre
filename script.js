@@ -1,17 +1,17 @@
-function fetchMovies() {
-    fetch("https://raw.githubusercontent.com/theMungai/Flatiron-movie-theatre/main/db.json")
-        .then((response) => response.json())
-        .then((movies) => {
-            window.allMovies = movies;
+fetch("https://raw.githubusercontent.com/theMungai/Flatiron-movie-theatre/main/db.json")
+    .then((response) => response.json())
+    .then((movies) => {
+        console.log(movies); // Log the fetched data to ensure it's correct
+        window.allMovies = movies;
 
-            if (movies.length > 0) {
-                loadMovieDetails(movies[0].id);
-            }
+        if (movies.length > 0) {
+            loadMovieDetails(movies[0].id);
+        }
 
-            movies.forEach((movie) => displayMovies(movie));
-        })
-        .catch((error) => console.error(error));
-}
+        movies.forEach((movie) => displayMovies(movie));
+    })
+    .catch((error) => console.error(error));
+
 
 function displayMovies(movie) {
     let movieTitle = document.createElement("li");
