@@ -1,5 +1,5 @@
 function fetchMovies() {
-    fetch("https://themungai.github.io/Flatiron-movie-theatre/db.json")
+    fetch("https://raw.githubusercontent.com/theMungai/Flatiron-movie-theatre/main/db.json")
         .then((response) => response.json())
         .then((movies) => {
             window.allMovies = movies;
