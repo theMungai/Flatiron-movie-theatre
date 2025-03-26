@@ -80,7 +80,7 @@ function handleBuyTicket(movie, movieDetailsContainer) {
 
 // Update tickets
 function updateTicketCount(movieId, ticketsSold) {
-    fetch(`http://localhost:3000/films/${movieId}`, {
+    fetch(`https://raw.githubusercontent.com/theMungai/Flatiron-movie-theatre/main/db.json${movieId}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -98,7 +98,7 @@ function updateTicketCount(movieId, ticketsSold) {
 
 // Delete movie
 function deleteMovie(movieId, movieElement) {
-    fetch(`http://localhost:3000/films/${movieId}`, {
+    fetch(`https://raw.githubusercontent.com/theMungai/Flatiron-movie-theatre/main/db.json${movieId}`, {
         method: "DELETE",
     })
         .then((response) => response.json())
