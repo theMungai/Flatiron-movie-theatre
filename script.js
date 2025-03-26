@@ -1,5 +1,5 @@
 function fetchMovies() {
-    fetch("http://localhost:3000/films")
+    fetch("https://themungai.github.io/Flatiron-movie-theatre/db.json")
         .then((response) => response.json())
         .then((movies) => {
             window.allMovies = movies;
